@@ -298,6 +298,14 @@ export class Client extends EventEmitter {
      */
 
     /**
+     * Fetch infomation about an UserID
+     * @param id The User ID
+     * @returns User infomation
+     */
+    async fetchUser(id: string) {
+        return await this.req('GET', `/users/${id}` as '/users/id');
+    }
+    /**
      * Fetch information about a given invite code.
      * @param code The invite code.
      * @returns Invite information.
